@@ -17,7 +17,9 @@ public class FiltrosLineares implements PlugIn, DialogListener {
         interfaceGrafica.addDialogListener(this);
 
         String[] estrategia = { "passa-baixas de média", "passa-altas", "borda" };
-        interfaceGrafica.addMessage("Mensagem de teste com alguma informação para a interface modal");
+        interfaceGrafica.addMessage("passa-baixas de média 1/10 * ({ 1, 1, 1 }, { 1, 2, 1 }, { 1, 1, 1 })");
+        interfaceGrafica.addMessage("passa-altas ({ -1, -1, -1 }, { -1, 9, -1 }, { -1, -1, -1 })");
+        interfaceGrafica.addMessage("realce de bordas NORTE ({ 1, 1, 1 }, { 1, -2, 1 }, { -1, -1, -1 })");
         interfaceGrafica.addRadioButtonGroup("Botões para escolher uma dentre várias estratégias", estrategia, 1, 3,
                 "passa-baixas de média");
         interfaceGrafica.showDialog();
